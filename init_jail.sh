@@ -1,6 +1,6 @@
 #!/bin/bash
 
-debootstrap --arch=amd64 stretch --include=apt,apt-utils "$1"
+debootstrap --arch=amd64 --include=apt,apt-utils stretch "$1"
 
 mount -t proc  proc   "$1/proc"
 mount -t sysfs sys    "$1/sys"
